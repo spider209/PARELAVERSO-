@@ -8,3 +8,29 @@
 .featured-cover img{transform:rotate(-3deg) scale(1.13)}
 .featured-cover:hover img{transform:rotate(0deg) scale(1.17)}
 .dialog-layout img{transform:scale(1.1)}
+
+/* Correção das faixas brancas laterais que fazem parte dos JPG originais.
+   O recorte acontece dentro de cada moldura, sem revelar transparência. */
+.floating-book,.floating-card,.book-img{overflow:hidden;background:#11110f}
+.floating-book img,.floating-card img,.book-img img{
+  clip-path:none!important;
+  display:block;
+  width:128%!important;
+  max-width:none!important;
+  height:100%!important;
+  margin-left:-14%!important;
+  object-fit:fill!important;
+}
+.floating-book img,.floating-card img{transform:none!important}
+.book-img img{transform:none!important}
+.book-card:hover .book-img img{transform:scale(1.045)!important}
+.featured-cover{overflow:hidden}
+.featured-cover img,.dialog-layout img{
+  clip-path:none!important;
+  max-width:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.featured-cover img{transform:rotate(-3deg) scale(1.24)!important}
+.featured-cover:hover img{transform:rotate(0) scale(1.28)!important}
+.dialog-layout img{transform:scale(1.24)!important}
